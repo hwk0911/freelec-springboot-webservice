@@ -6,7 +6,7 @@
 ## 01장 인텔리제이로 스프링 부트 시작하기
 ## 02장 스프링 부트에서 테스트 코드를 작성하자
 ## 03장 스프링 부트에서 JPA로 데이터베이스 다뤄보자
-    3.4 Spring Web Layer (p101 ~ p102)
+### 3.4 Spring Web Layer (p101 ~ p102)
     1. Web Layer  
         흔히 사용하는 컨트롤러(@Controller)와 JSP/Freemaker 등의 뷰 템플릿 영역이다.  
         이외에도 필터(@Filter), 인터셉터, 컨트롤러 어드바이스(@ControllerAdvice) 등    
