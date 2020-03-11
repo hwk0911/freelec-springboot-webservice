@@ -1,5 +1,6 @@
 package com.tistory.cafecoder.springboot.domain.posts;
 
+import com.tistory.cafecoder.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import javax.persistence.Id;
 @Getter // 6
 @NoArgsConstructor // 5
 @Entity // 1
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id // 2
     @GeneratedValue( strategy = GenerationType.IDENTITY) // 3
