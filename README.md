@@ -84,7 +84,7 @@
 
     출처: https://araikuma.tistory.com/460 [프로그램 개발 지식 공유]   
 
-### Gradle wrapper  
+## Gradle wrapper  
 > 이미 존재하는 프로젝트를 새로운 환경에 설치할 때 별도의 설치나 설정 없이 바로 빌드하기 위해 사용된다.
 
     1. Java 혹은 Gradle 자체도 설치할 필요가 없으며, 로컬로 설치된 경우도 마찬가지다.
