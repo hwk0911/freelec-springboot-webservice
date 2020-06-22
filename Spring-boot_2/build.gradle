@@ -31,3 +31,7 @@ dependencies {
     compile('com.h2database:h2')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+/*
+디펜던시 내용 정리는 카페코더 블로그에 포스팅.
+ */
