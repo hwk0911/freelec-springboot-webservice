@@ -1,8 +1,8 @@
 var index = {
     init : function () {
         var _this = this;
-        $('#btn-save').on('click', function {
-            _this.save;
+        $('#btn-save').on('click', function() {
+            _this.save();
         });
     },
 
@@ -20,7 +20,7 @@ var index = {
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
         }).done(function() {
-            alert("글이 등록되었습니다.");
+            alert('글이 등록되었습니다.');
             window.location.href = '/';
         }).fail(function() {
             alert(JSON.stringify(error));
