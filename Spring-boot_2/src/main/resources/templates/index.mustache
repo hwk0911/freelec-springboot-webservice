@@ -7,6 +7,28 @@
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
         </div>
     </div>
+
+    <!-- 목록 출력 영역-->
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
+        <tr>
+            <th>게시글 번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>최종수정일</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#posts}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{title}}</td>
+                <td>{{author}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+        {{/posts}}
+        </tbody>
+    </table>
 </div>
 
 {{>layout/footer}}
@@ -15,5 +37,10 @@
 <!--
 1의 문법은 현재 머스테치 파일(index.mustache)을 기준으로 다른 파일을 가져온다.
 
+#posts
+posts 라는 List를 순회한다.
+Java의 for문과 동일하게 생각하면 된다.
 
+머스태시 문법 내 id 등의 변수명
+List에서 뽑아낸 객체의 필드를 사용한다.
 -->
