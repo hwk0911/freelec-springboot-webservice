@@ -18,7 +18,6 @@ public class HelloController {
     }
 }
 
-
 /*
 @RestController
 컨트롤러를 JSON을 반환하는 컨트롤러로 만들어준다.
