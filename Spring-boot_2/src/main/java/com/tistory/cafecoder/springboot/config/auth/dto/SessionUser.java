@@ -15,3 +15,9 @@ public class SessionUser {
         this.picture = user.getPicture();
     }
 }
+
+/*
+SessionUser에는 인증된 사용자 정보만 필요하다.
+그외에 정보들은 필요 없으니, name, email, picture만 필드로 선언한다.
+
+ */
