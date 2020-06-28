@@ -1,5 +1,6 @@
 package com.tistory.cafecoder.springboot.web;
 
+import com.tistory.cafecoder.springboot.config.auth.LoginUser;
 import com.tistory.cafecoder.springboot.config.auth.dto.SessionUser;
 import com.tistory.cafecoder.springboot.service.Posts.PostsService;
 import com.tistory.cafecoder.springboot.web.dto.PostsResponseDto;
@@ -19,10 +20,8 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
-
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
         if(user != null) {
             model.addAttribute("userName", user.getName());
@@ -61,4 +60,8 @@ Model
 (SessionUser) httpSession.getAttribute("user");
 앞서 작성된 CustomOAuth2UserService에서 로그인 성공 시 세션에 SessionUser를 저장하도록 구성했다.
 즉, 로그인 성공 시 httpSession.getAttribute("user")에서 값을 가져올 수 있다.
+
+@LoginUser SessionUser user
+기존에 (User) httpSession.getAttribute("User")로 가져오던 세션 정보 값이 개선되었다.
+어느 컨트롤러든지 @LoginUser만 사용하면, 세션정보를 가져올 수 있게 되었다.
  */
